@@ -1,5 +1,5 @@
-﻿using ArmstrongNumber;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Utilities;
 
 namespace ArmstrongNumberTests
 {

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ArmstrongNumber
+namespace Utilities
 {
-    public static class ArmstrongIntExtensions
+    public static class MathIntExtensions
     {
         public static bool IsArmstrong(this int number)
         {
