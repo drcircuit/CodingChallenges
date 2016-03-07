@@ -47,6 +47,7 @@ namespace ArmstrongNumberTests
         [TestMethod]
         public void BigArmstrongAreArmstrong()
         {
+            Assert.AreEqual(true, 92727.IsArmstrong());
             Assert.AreEqual(true, 24678051.IsArmstrong());
             Assert.AreEqual(true, 146511208.IsArmstrong());
         }

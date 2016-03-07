@@ -20,9 +20,21 @@ namespace Utilities
                 sum += r.Power(digits);
                 if (sum > number)
                     return false;
-                n /= 10;
+                n = n.DivBy10();
             }
             return sum == number;
+        }
+
+        //this is the most nerdy way I've found to divide by ten, unless you compile with optimizations, (which will do this for you) this is pretty fast!
+        public static int DivBy10(this int n)
+        {
+            var q = (n >> 1) + (n >> 2);
+            q = q + (q >> 4);
+            q = q + (q >> 8);
+            q = q + (q >> 16);
+            q = q >> 3;
+            var r = n - (((q << 2) + q) << 1);
+            return q + (r > 9 ? 1 : 0);
         }
 
         public static int CountDigits(this int number)
